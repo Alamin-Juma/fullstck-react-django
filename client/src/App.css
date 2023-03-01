@@ -1,0 +1,51 @@
+body {
+  background-color: rgb(24, 24, 29);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 2.5em;
+
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input, button {
+  width: 559px;
+  height: 50px;
+  margin-bottom: 5px;;
+}
+label {
+  color: white;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+button {
+  background-color: rgb(17, 37, 212);
+  color: whitesmoke;
+  font-size: 1.5em;
+}
