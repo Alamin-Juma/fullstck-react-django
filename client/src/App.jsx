@@ -85,7 +85,7 @@ function App() {
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
-      <label>
+        <label>
           First Name:
         </label>
         <input type="text" name="firstname" value={formData.firstname || ""} onChange={handleChange} />
@@ -114,7 +114,7 @@ function App() {
             <h2>Name: {`${user.firstname} ${user.secondname}`}</h2>
             <p>Email: {user.email}</p>
             <p>Phone: {user.phone}</p>
-            <p>Phone: {user.age}</p>
+            <p>age: {user.age}</p>
             <button onClick={() => handleEdit(user.id)}>Edit</button>
             <button onClick={() => deleteUser(user.id)}>Delete</button>
           </div>
