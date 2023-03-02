@@ -30,9 +30,9 @@ function App() {
       client
         .post("", formData)
         .then((response) => {
-          console.log(response);
+          console.log(response.data.users);
           // add the new user to the local state
-          setUsers([...users, response.data]);
+          setUsers([...users, response.data.users]);
         })
         .catch((error) => {
           console.log(error);
@@ -45,7 +45,7 @@ function App() {
           // update the edited user in the local state
           const updatedUsers = users.map((user) => {
             if (user.id === editUserId) {
-              return response.data;
+              return response.data.users;
             } else {
               return user;
             }
@@ -82,8 +82,6 @@ function App() {
     );
   };
 
-
-
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
@@ -103,6 +101,10 @@ function App() {
           Phone:
         </label>
         <input type="text" name="phone" value={formData.phone || ""} onChange={handleChange} />
+        <label>
+          Age:
+        </label>
+        <input type="text" name="age" value={formData.age || ""} onChange={handleChange} />
         <button type="submit">{editing ? "Update User" : "Add User"}</button>
       </form>
       <h1 className="title">Users</h1>
@@ -112,6 +114,7 @@ function App() {
             <h2>Name: {`${user.firstname} ${user.secondname}`}</h2>
             <p>Email: {user.email}</p>
             <p>Phone: {user.phone}</p>
+            <p>Phone: {user.age}</p>
             <button onClick={() => handleEdit(user.id)}>Edit</button>
             <button onClick={() => deleteUser(user.id)}>Delete</button>
           </div>
