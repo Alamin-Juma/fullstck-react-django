@@ -5,9 +5,9 @@
 ## adding new users using React forms 
 ![](images/one.JPG)
 
-## editing a user on a certain ID
+## editing a user with a certain ID
 ![](images/edit.JPG)
 
-## routing to success page diplaying confetti for on submitting data for add/edit user. Then re-rotes back to home page fetching the updatesd data 
+## Routing to the success page displaying confetti on submitting data for adding/editing a user. Then, re-routing back to the home page and fetching the updated data.
 ![](images/success.JPG)
 
